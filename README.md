@@ -74,10 +74,6 @@ I cleaned the data in Power Query and created the following;
 - Merged the Year and Month columns in both the Customer Loyalty History and Customer Flight Activity tables to align with the unified date format.
 - Cleaned the dataset by converting columns to appropriate data types, removing duplicate records, and handling null values to ensure data accuracy and integrity.
 
-## Data Modelling
-
-
-
 ## Insights
 1. **Is the promotion program a success?**
 The year-over-year trend from 2017 to 2018 shows an overall increase. One of the main drivers of this growth in 2018 was the promotional activity.
