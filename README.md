@@ -1,5 +1,5 @@
 # Airline-Loyalty-Program-Performance-Dashboard
-The data source can be found on website at [this link](https://www.kaggle.com/datasets/divu2001/coffee-shop-sales-analysis/data/). The main objective of this project is to analyze loyalty program enrollments, cancellations and flights booked for Northern Lights Air (NLA) -a Canadian airline during the campaign from 1/2/2018 - 30/4/2028  and using Power BI.
+The main objective of this project is to analyze loyalty program enrollments, cancellations and flights booked for Northern Lights Air (NLA) -a Canadian airline during the campaign from 1/2/2018 - 30/4/2028  and using Power BI.
 
 [Preview_Dashboard](https://github.com/David-Tu-Nguyen/Coffee_Shop_Sales_Analysis/blob/main/PowerBI_Dashboard/Dashboard_Snapshot.gif/). 
 
@@ -34,20 +34,31 @@ Dataset contains 3 CSV tables :
   
 Column Name | Data Type | Description
 | ------------- |:-------------:| :-------------:|
-Transaction_ID | Integer | Unique identifier for each transaction.
-Transaction_Date | DateTime | Date and time when the transaction occurred.
-Product_Name | Varchar | Name of the product sold (e.g., Espresso, Latte).
-Product_Category | Varchar | Category of the product (e.g., Hot Beverage, Cold Beverage, Pastry).
-Quantity_Sold | Integer | Number of units sold in the transaction.
-Unit_Price | Float | Price per unit of the product.
-Total_Sales | Float | Total revenue from the transaction (Quantity_Sold × Unit_Price).
-Payment_Method | Varchar | Mode of payment used (e.g., Cash, Credit Card, Mobile Payment).
-Customer_Age_Group | Varchar | Age group of the customer (e.g., 18-24, 25-34).
-Customer_Gender | Varchar | Gender of the customer (e.g., Male, Female).
-Store_Location | Varchar | Location of the store where the transaction took place.
-Day_of_Week | Varchar | Day of the week when the transaction occurred (e.g., Monday, Tuesday).
-Time_of_Day | Varchar | Time period of the day (e.g., Morning, Afternoon, Evening).
-Season | Varchar | Season during which the transaction occurred (e.g., Winter, Summer).
+Loyalty Number | String | Customer's unique loyalty number
+Year | Integer | Year of the period
+Month | Varchar | Month of the period
+Total Flights | Integer | Sum of flights booked (all tickets purchased in the period)
+Distance | Float | Flight distance traveled in the period (km)
+Points Accumulated | Integer | Loyalty points accumulated in the period
+Points Redeemed | Integer | Loyalty points redeemed in the period
+Dollar Cost Points Redeemed | Float | Dollar equivalent for points redeemed in the period in CDN
+Country | String | Country of residence
+Province | String | Province of residence
+City | String | City of residence
+Postal Code | String | Postal code of residence
+Gender |	String |	Gender
+Education |	String |	Highest education level (High school or lower > College > Bachelor > Master > Doctor)
+Salary |	Float |	Annual income
+Marital Status |	String |	Marital status (Single, Married, Divorced)
+Loyalty Card |	String |	Loyalty card status (Star > Nova > Aurora)
+CLV |	Float |	Customer lifetime value - total invoice value for all flights ever booked by member
+Enrollment Type |	String |	Enrollment type (Standard / 2018 Promotion)
+Enrollment Year |	Integer |	Year member enrolled in membership program
+Enrollment Month |	Integer |	Month member enrolled in membership program
+Cancellation Year |	Integer |	Year member cancelled their membership
+Cancellation Month |	Integer |	Month member cancelled their membership
+
+
 
 ## Methodology and tools used
 Tables
