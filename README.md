@@ -1,7 +1,5 @@
 # Airline-Loyalty-Program-Performance-Dashboard
-Analyzing loyalty program enrollments, cancellations and flights booked for Northern Lights Air (NLA), a Canadian airline looking to boost enrollment for their loyalty program.
-
-The data source can be found on website at [this link](https://www.kaggle.com/datasets/divu2001/coffee-shop-sales-analysis/data/). The main objective of this project is to evaluate the sales of three coffee shop locations using Power BI.
+The data source can be found on website at [this link](https://www.kaggle.com/datasets/divu2001/coffee-shop-sales-analysis/data/). The main objective of this project is to analyze loyalty program enrollments, cancellations and flights booked for Northern Lights Air (NLA) -a Canadian airline during the campaign from 1/2/2018 - 30/4/2028  and using Power BI.
 
 [Preview_Dashboard](https://github.com/David-Tu-Nguyen/Coffee_Shop_Sales_Analysis/blob/main/PowerBI_Dashboard/Dashboard_Snapshot.gif/). 
 
@@ -24,14 +22,15 @@ The data source can be found on website at [this link](https://www.kaggle.com/da
   + Insert a stacked column chart to show loyalty member flights booked by enrollment type, trended by month, and add a slicer to filter the page by enrollment type.
 
 The questions we will answer through this analysis are the following :
-- Was the promotional campaign successful in driving customer engagement and bookings?
+- Is the promotion program a success?
 - How did the campaign influence loyalty program enrollment and cancellation rates?
 - Did the campaign appeal more strongly to specific demographic segments (e.g., age, gender, location)?
-- Which travel season is most preferred by newly enrolled loyalty members?
 
 ## Data dictionary
-- Number of Rows: 412,230 
-- Number of Columns: 28
+Dataset contains 3 CSV tables :
+- **Calendar Table:** Ensures consistency of date intervals for data modelling.
+- **Customer Loyalty History Table**: Contains details of 16,000 customers, including location, education background, membership status, and cancellation status.
+- **Customer Flight Activity Table:** Includes over 39,000 records including travel month and distance travelled per trip.
   
 Column Name | Data Type | Description
 | ------------- |:-------------:| :-------------:|
@@ -60,39 +59,30 @@ Tables
 
 ## Data Cleaning and Transformations
 I cleaned the data in Power Query and created the following;
-- **Created measures**: Total Sales, Total Orders, Total quantity,...
-- **Created calculated columns**: Time of Day, Date Hierarchy, Linear Regression Prediction,...
+- Created a YYYY-MM identifier in the Calendar table to enable consistent joins across related tables.
+- Merged the Year and Month columns in both the Customer Loyalty History and Customer Flight Activity tables to align with the unified date format.
+- Cleaned the dataset by converting columns to appropriate data types, removing duplicate records, and handling null values to ensure data accuracy and integrity.
+
+## Data Modelling
+
+
 
 ## Insights
-**Revenue and transactions**
-- Monthly sales have consistently grown since the second month (February), reaching their peak in the sixth month (June) across all stores.
-- 72.06% of revenue is generated during weekdays for all stores
-- On weekdays, Hell's Kitchen experiences its highest sales on Friday and Tuesday, signifying these as the busiest days. Similarly, Astoria's busiest weekdays are Thursday and Monday. Lower Manhattan's busiest weekday is Monday.
+**Is the promotion program a success?**
+The year-over-year trend from 2017 to 2018 shows an overall increase. One of the main drivers of this growth in 2018 was the promotional activity.
+During the 2018 promotion, there were approximately 9,000 additional enrollments compared to the previous year during the peak period. In terms of effectiveness, the promotion achieved its intended goals — it led to a noticeable increase in both flight bookings by loyalty members and new loyalty program sign-ups during the promotional period.
 
-**Store hours**
-- Hell's Kitchen and Lower Manhattan operate from 6:00 to 20:00, while Astoria is open from 7:00 to 19:00.
-- Peak hours for Hell's Kitchen and Lower Manhattan are between 6:00 AM and 10:00 AM.
-- Astoria experiences its busiest period from 7:00 to 10:00, consistently throughout the week and on weekends.
+**Loyalty Customer Demographics (during the 2018 promotion):**
+- Gender distribution is nearly equal, with 48.71% male and 50.14% female customers.
+- Married individuals account for the highest number of flight bookings, followed by single and divorced customers.
+- Customers with a Loyalty Card status of Star account for the highest number of flight bookings, followed by those with Nova and Auror cards.
+- Customers with a Bachelor’s degree are the most frequent flyers, followed by those with a college-level education.
+- The majority of loyalty customers reside in major Canadian cities, primarily Toronto, Vancouver, and Montreal.
   
-> Although Lower Manhattan generates the lowest total revenue, it records the highest sales during peak hours compared to the other locations. In contrast, Astoria achieves the highest sales during non-peak hours among all stores, despite having shorter operating hours.
-
-**Top 3 product and category across all 3 stores.**
-
-a) **Coffee** generated $269,952 in revenue, accounting for 38.6% of total sales, making it the highest-performing product category across all branches.
-- Top coffee item at each location:
-* Astoria: Barista Espresso (~$27K)
-* Hell’s Kitchen: Barista Espresso (~$32K)
-* Lower Manhattan: Barista Espresso (~$31K)
-
-b) **Tea** sales make up 27.7% of the total combined revenue from the three stores, amounting to $196,406.
-- Leading tea products by store:
-* Astoria: Brewed Chai Tea (Spicy Eye Opener Chai, Large) – approx. $27K
-* Hell’s Kitchen: Brewed Chai Tea (Morning Sunrise Chai, Regular) – approx. $26K
-* Lower Manhattan: Brewed Chai Tea (Morning Sunrise Chai, Regular) – approx. $24K
-
-c) **Bakery** items generated $82,316 in sales, contributing 12.3% to the total revenue across all stores, ranking as the third best-selling product category.
+**How did the campaign influence loyalty program enrollment and cancellation rates?**
+The campaign had a positive impact on loyalty program performance. During the 2018 promotion, enrollment rates increased significantly, indicating that the campaign successfully attracted new members. At the same time, cancellation rates remained low, suggesting strong member retention and satisfaction with the program.
 
 ## Recommendations
-- Leverage data from peak hours and top-performing days to optimize staffing and inventory distribution.
-- Target underperforming locations for improvement while replicating successful strategies from high-performing stores.
-- Distribute marketing resources according to the revenue share of each product category.
+- NLA target market would be Married & Single, with Bachelor & College education background and based in 3 major cities (Toronto, Vancouver, and Montreal)
+- During off-peak months, specials promotions should be created; during peak seasons (April - September), premium packages should be promoted.
+- NLA can create different marketing plans, like special travel deals for couples in February to celebrate the month of love.
